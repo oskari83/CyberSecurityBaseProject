@@ -1,0 +1,71 @@
+* {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+li a {
+    color: rgb(71, 114, 253);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    color: rgb(71, 114, 253);
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding: 30px;
+}
+
+h1 {
+    color: rgb(59, 59, 59);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.labelText{
+    color: rgb(59, 59, 59);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+    color: rgb(59, 59, 59);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: rgb(59, 59, 59);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    color: rgb(71, 114, 253);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(99, 99, 99);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid gray;
+    padding: 10 10 10 10;
+}
+
+a:hover {
+    background-color: rgb(122, 153, 255);
+}
+
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+}

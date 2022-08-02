@@ -1,7 +1,9 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
+from . import forms
+from django.utils import timezone
 
 from .models import Choice, Question
 
@@ -31,3 +33,20 @@ def vote(request, question_id):
         selected_choice.votes+=1
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def add_poll(request):
+    if request.method == 'POST':
+        form = forms.AddPoll(request.POST)
+        formset = forms.QuestionMetaInlineFormset(request.POST)
+        if form.is_valid() and formset.is_valid():
+            curForm = form.save(commit=False)
+            curForm.save()
+            pollMetas = formset.save(commit=False)
+            for meta in pollMetas:
+                meta.question = curForm
+                meta.save()
+            return redirect('polls:index')
+    else:
+        form = forms.AddPoll(initial={'pub_date': timezone.now()})
+        product_meta_formset=forms.QuestionMetaInlineFormset()
+    return render(request, 'polls/add_poll.html', {'form':form, 'product_meta_formset': product_meta_formset})
