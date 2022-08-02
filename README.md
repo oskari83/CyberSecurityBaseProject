@@ -1,4 +1,4 @@
-# Cyber Security Base 2021 - Course Project I
+# Cyber Security Base 2022 - Course Project I
 
 My Cyber Security Base Course Project with flaws from the [OWASP 2021 list](https://owasp.org/www-project-top-ten/).
 
