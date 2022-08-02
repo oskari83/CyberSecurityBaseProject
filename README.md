@@ -23,3 +23,23 @@ http://127.0.0.1:8000/admin/
   
 **Username:** admin  
 **Password:** password
+
+## FLAW 1: [CSRF (Cross-Site Request Forgery)](https://cybersecuritybase.mooc.fi/module-2.3/1-security)  
+
+Write here...
+
+## FLAW 2: [Injection](https://owasp.org/Top10/A03_2021-Injection/)  
+
+Write here...
+
+## FLAW 3: [Insecure Design](https://owasp.org/Top10/A04_2021-Insecure_Design/)  
+
+Write here...
+
+## FLAW 4: [Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)  
+
+Write here...
+
+## FLAW 5: [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)  
+
+Write here...
