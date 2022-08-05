@@ -26,7 +26,6 @@ http://127.0.0.1:8000/admin/
 
 Locations of flaws:
 https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/templates/polls/add_poll.html#L9
-https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/templates/polls/add_poll.html#L14
 https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/templates/polls/detail.html#L10
 
 Cross-site request forgery is an attack where existing user priviliges (cookies or tokens) of an authenticated user on a computer are used to make malicious requests and access private user data. In other words, if a user is logged in to, for example, their banks website, a malicious agent can send an unsolicited email or plant an exploit on a site they know the target is going to visit. If the website is vulnerable to CSRF, the attacker can implant a malicious url in an HTML image or link, or if the target website only accepts POST requests, then through an HTML form and some javascript. Once executed it looks like the target has willfully transferred funds to the attacker with no way to remedy the situation other than contacting the bank itself and trying to seek help through them.
