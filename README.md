@@ -45,10 +45,12 @@ Currently the flaw in my code only exists in the comments meaning I have already
 ## FLAW 3: [Insecure Design](https://owasp.org/Top10/A04_2021-Insecure_Design/)  
 
 Locations of flaws:
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/tests.py#L3
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/views.py#L13
 
-Insecure design is a collection of software flaws that arise from poor design and software architecture. Examples of insecure design are systems which are vulnerable to bots in for instance scalping, flaws in business logic with either monetary or privacy leaks, or authentication systems that are designed for speed and ease of use potentially allowing users to choose unsafe passwords. In other words, insecure design is an umbrella term for inherent logical or systematic flaws that are not as a result of poor implementation, but rather due to poor design. 
+Insecure design is a collection of software flaws that arise from poor design and software architecture. Examples of insecure design are systems which are vulnerable to bots in for instance scalping, flaws in business logic with either monetary or privacy leaks, or authentication systems that are designed for speed and ease of use potentially allowing users to choose unsafe passwords. In other words, insecure design is an umbrella term for inherent logical or systematic flaws that are not as a result of poor implementation, but rather due to poor design. The main prevention against insecure design is the use of robust testing and design protocols. Django allows us to create automated tests and as a developer one can follow a discipline called TDD or test driven development to create tests in advance and build functionality around them. 
 
-The main prevention against insecure design is the use of robust testing and design protocols. Django allows us to create automated tests and as a developer one can follow a discipline called TDD or test driven development to create tests in advance and build functionality around them.
+To fix the lack of tests I simply need to create a wide range of tests covering different situations and edge cases. Another flaw in my app is that one can vote several times on a single poll which is not wanted as this can skew results. Testing would have discovered this flaw, and to fix it one needs to implement similar systems as with the "Millionaire" exercise in part 5 of the course.
 
 ## FLAW 4: [Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)  
 
