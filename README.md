@@ -35,10 +35,12 @@ To fix these flaws we only need to add {% csrf_token %} to each form in our appl
 ## FLAW 2: [Injection](https://owasp.org/Top10/A03_2021-Injection/)  
 
 Locations of flaws:
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/views.py#L35
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/views.py#L51
 
 Injection is a vulnerability in the code where a malicious user can send code to the server hidden as regular user data that then gets executed on the server. This execution is not planned for and hence can cause anything from access to private data to corruption of files. One of the most common forms of injection is SQL injection where database queries are made without "cleaning" or "sanitizing" user data i.e. making sure it contains only what it is supposed to. 
 
-Write here...
+Currently the flaw in my code only exists in the comments meaning I have already fixed it. This has been done by utilizing djangos readymade models framwork for database queries which takes care of sanitizing data so that injection of the SQLite database is not possible. In the commented lines you can however see that when using the execute command the database is vulnerable to injection.
 
 ## FLAW 3: [Insecure Design](https://owasp.org/Top10/A04_2021-Insecure_Design/)  
 
