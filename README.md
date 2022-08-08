@@ -55,10 +55,11 @@ To fix the lack of tests I simply need to create a wide range of tests covering 
 ## FLAW 4: [Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)  
 
 Locations of flaws:
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/cybersecurityproject/settings.py#L41
 
-Insecure design is a collection of software flaws that 
+Vulnerable and outdated components is a flaw where one uses pre-existing software components i.e. code that has vulnerabilites thereby exposing one's own app to these vulnerabilities as well. This means that one needs to periodically audit the components one uses to make sure one isn't exposing oneself to vulnerabilities as time goes on and more security risks are discovered. Luckily django and many other frameworks do this automatically so we only need to pay attention to its warnings.
 
-To fix the...
+So just for the sake of this flaw I tried to found a vulnerable component and when I ran pip-audit I found that the werkzeug package has known vulnerabilites. Hence including it in the project is a flaw and to fix this one needs to either remove the package or update it.
 
 
 ## FLAW 5: [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)  
