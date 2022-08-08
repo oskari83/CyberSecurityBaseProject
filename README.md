@@ -44,12 +44,25 @@ Currently the flaw in my code only exists in the comments meaning I have already
 
 ## FLAW 3: [Insecure Design](https://owasp.org/Top10/A04_2021-Insecure_Design/)  
 
-Write here...
+Locations of flaws:
+
+Insecure design is a collection of software flaws that arise from poor design and software architecture. Examples of insecure design are systems which are vulnerable to bots in for instance scalping, flaws in business logic with either monetary or privacy leaks, or authentication systems that are designed for speed and ease of use potentially allowing users to choose unsafe passwords. In other words, insecure design is an umbrella term for inherent logical or systematic flaws that are not as a result of poor implementation, but rather due to poor design. 
+
+The main prevention against insecure design is the use of robust testing and design protocols. Django allows us to create automated tests and as a developer one can follow a discipline called TDD or test driven development to create tests in advance and build functionality around them.
 
 ## FLAW 4: [Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)  
 
-Write here...
+Locations of flaws:
+
+Insecure design is a collection of software flaws that 
+
+To fix the...
+
 
 ## FLAW 5: [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)  
 
-Write here...
+Locations of flaws:
+
+Insecure design is...
+
+To fix the...
