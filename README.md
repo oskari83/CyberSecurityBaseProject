@@ -30,9 +30,13 @@ https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecuritypr
 
 Cross-site request forgery is an attack where existing user priviliges (cookies or tokens) of an authenticated user on a computer are used to make malicious requests and access private user data. In other words, if a user is logged in to, for example, their banks website, a malicious agent can send an unsolicited email or plant an exploit on a site they know the target is going to visit. If the website is vulnerable to CSRF, the attacker can implant a malicious url in an HTML image or link, or if the target website only accepts POST requests, then through an HTML form and some javascript. Once executed it looks like the target has willfully transferred funds to the attacker with no way to remedy the situation other than contacting the bank itself and trying to seek help through them.
 
-To fix these flaws we only need to add {% csrf_token %} to each form in our application and django will take care of the rest. You can see this as comments in the linked locations of the flaws.
+To fix these flaws we only need to add {% csrf_token %} to each form in our application and django will take care of the rest. (The CSRF flaw is fixed in my project so that the demo app runs)
 
 ## FLAW 2: [Injection](https://owasp.org/Top10/A03_2021-Injection/)  
+
+Locations of flaws:
+
+Injection is a vulnerability in the code where a malicious user can send code to the server hidden as regular user data that then gets executed on the server. This execution is not planned for and hence can cause anything from access to private data to corruption of files. One of the most common forms of injection is SQL injection where database queries are made without "cleaning" or "sanitizing" user data i.e. making sure it contains only what it is supposed to. 
 
 Write here...
 

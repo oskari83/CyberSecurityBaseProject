@@ -6,7 +6,8 @@
     <h2>Create new poll:</h2>
 
     <form action="{% url 'polls:add_poll' %}" method="post">
-    <!-- {% csrf_token %} -->
+    <!-- Below we need to have {% csrf_token %} -->
+    {% csrf_token %}
     {{form}}
     <h5>Add Choices</h5>
         {{ product_meta_formset.non_form_errors }}

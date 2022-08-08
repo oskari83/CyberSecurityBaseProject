@@ -8,7 +8,7 @@ from django.utils import timezone
 from .models import Choice, Question
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    latest_question_list = Question.objects.order_by('-pub_date')[:10]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index.html', context)
 
@@ -31,6 +31,14 @@ def vote(request, question_id):
         })
     else: 
         selected_choice.votes+=1
+
+        #Here the following code is vulnerable to SQL injection, the actual code is the fix i.e. using django models which sanitize data            
+        #cursor = conn.cursor()
+	    #command = """UPDATE Choice SET (vote) WHERE id=(id) VALUES (?,?) ;"""
+        #data_tuple=(selected_choice.votes,id)
+	    #cursor.execute(command,data_tuple)
+	    #conn.commit()
+
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
@@ -39,6 +47,14 @@ def add_poll(request):
         form = forms.AddPoll(request.POST)
         formset = forms.QuestionMetaInlineFormset(request.POST)
         if form.is_valid() and formset.is_valid():
+            
+            #Here the following code is vulnerable to SQL injection, the actual code is the fix i.e. using django models which sanitize data            
+            #cursor = conn.cursor()
+	        #command = """INSERT INTO Question (question_text,pub_date) VALUES (?,?);"""
+	        #data_tuple=(question_text,pub_date)
+	        #cursor.execute(command,data_tuple)
+	        #conn.commit()
+
             curForm = form.save(commit=False)
             curForm.save()
             pollMetas = formset.save(commit=False)
