@@ -65,6 +65,8 @@ So just for the sake of this flaw I tried to found a vulnerable component and wh
 ## FLAW 5: [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)  
 
 Locations of flaws:
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/cybersecurityproject/settings.py#L128
+https://github.com/oskari83/CyberSecurityBaseProject/blob/master/cybersecurityproject/polls/views.py#L8
 
 Failures in security logging and monitoring are flaws that lead to inability to detect breaches or malicious use. Not only does this mean that responding to these breaches is impossible (since one does not even know they are happening), but the root cause of these breaches remains unearthed. Proper logging and monitoring is essential in making sure that one can act in response to security breaches and fix any vulnerabilities as they give a hint to the developer as to how to correct them.
 
