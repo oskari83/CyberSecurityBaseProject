@@ -5,6 +5,12 @@ from django.views import generic
 from . import forms
 from django.utils import timezone
 
+#add logger for example to views.py
+#import logger
+#logger = logging.getLogger('pollsLogger')
+#then we can print logs using the following line anywhere in our code to track anything that happens, for example the addition of polls and voting actions
+#logger.debug("write log text here..")
+
 from .models import Choice, Question
 
 def index(request):

@@ -66,6 +66,6 @@ So just for the sake of this flaw I tried to found a vulnerable component and wh
 
 Locations of flaws:
 
-Insecure design is...
+Failures in security logging and monitoring are flaws that lead to inability to detect breaches or malicious use. Not only does this mean that responding to these breaches is impossible (since one does not even know they are happening), but the root cause of these breaches remains unearthed. Proper logging and monitoring is essential in making sure that one can act in response to security breaches and fix any vulnerabilities as they give a hint to the developer as to how to correct them.
 
-To fix the...
+As there is no logger currently in use in the project, fixing this flaw requires us to simply add a logger to our project and then configure it to log any important actions in our app. We could for example log every time that a poll is created or voted on or the adming logs in to the app etc. 
